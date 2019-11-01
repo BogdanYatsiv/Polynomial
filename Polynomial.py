@@ -33,7 +33,7 @@ class Polinom:
                     if x[1] == i:
                         return x
             else:
-                raise IndexError("Polynomial don`t have such index")
+                raise IndexError("There is no such index")
         else:
             raise IndexError("Bad index")
 
@@ -80,15 +80,15 @@ class Polinom:
 
     def __call__(self,val,i):
         """Перевантаження оператора ()"""
-        if i > 0 and i <= self.len:
+        if i >= 0:
             if i in self.indexes:
                 for x in self.values:
                     if x[1] == i:
                         return x[0]*(val**i)
             else:
-                return 0
+                raise IndexError("Bad index")
         else:
-            return IndexError("Out of range")
+            raise IndexError("Bad index")
 
     def __mul__(self,other):
         """Перевантаження оператора * """

@@ -11,6 +11,11 @@ print("Polinom a: ",a)
 print("Polinom b: ",b)
 print("Polinom c: ",c,end="\n\n")
 
+print("===Call===\n")
+print(a(5,2),"\n")
+print("===Call===\n")
+
+
 c = a+b
 print("Now c is sum of a & b: ",c,end="\n\n")
 
@@ -23,6 +28,8 @@ print("First elem of a: ",a[1],"\nWe can change it on smt other, a[1] = 0, a[2] 
 a[1] = 0
 a[2] = 13
 print("Now first elem of a =",a[1],end="\n\n")
+
+
 
 print("Values of a: ",end="")
 for x in a:
