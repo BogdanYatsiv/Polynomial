@@ -120,5 +120,15 @@ class Poly_tests(unittest.TestCase):
         del self.a
         del self.b
 
+    @classmethod
+    def setUpClass(cls):
+        print("SET UP TESTS")
+        print("==================")
+
+    @classmethod
+    def tearDownClass(cls):
+        print("==================")
+        print("TEAR DOWN TESTS")
+
 if __name__ == "__main__":
     unittest.main()
