@@ -27,19 +27,19 @@ class Polinom:
 
     def __getitem__(self,i):
         """Перевантаження оператора [](читання)"""
-        if i > 0 and i <= self.len:
+        if i >= 0:
             if i in self.indexes:
                 for x in self.values:
                     if x[1] == i:
                         return x
             else:
-                return 0
+                raise IndexError("Polynomial don`t have such index")
         else:
-            return 0
+            raise IndexError("Bad index")
 
     def __setitem__(self,index,value):
         """Перевантаження оператора [](запис)"""
-        if index > 0 and index <= self.len:
+        if index >= 0:
             temp = list(map(list,self.values))
             if value != 0:
                 if index in self.indexes:
@@ -60,7 +60,7 @@ class Polinom:
                     raise ValueError("Empty value")
 
         else:
-            raise IndexError("Out of range!")
+            raise IndexError("Bad index")
 
         self.values = list(map(tuple,temp))
 
@@ -139,8 +139,8 @@ class Polinom:
         """Перевантаження ітерування"""
         return Iterator(self.values)
 
-    def __del__(self):
-        print("Deleting polynome")
+    # def __del__(self):
+    #     print("Deleting polynome")
 
 
 class PolynomeManager:

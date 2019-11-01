@@ -1,4 +1,4 @@
-from Polinom import *
+from Polynomial import *
 
 cont = [(23,5),(13,1),(1,2)]
 cont2 = [(-20,5),(13,3),(1,2),(5,7),(-10,10)]
