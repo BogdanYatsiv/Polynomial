@@ -1,0 +1,4 @@
+We got poly A from shelve:  P_5(x) =  13*x^1 + 1*x^2 + 23*x^5
+We got poly B from shelve:  P_10(x) =  1*x^2 + 13*x^3  -20*x^5 + 5*x^7  -10*x^10
+We can add them poly_a + poly_b =  P_10(x) =  13*x^1 + 2*x^2 + 13*x^3 + 3*x^5 + 5*x^7  -10*x^10
+Sum of polynomials from pickle:  P_10(x) =  13*x^1 + 2*x^2 + 13*x^3 + 3*x^5 + 5*x^7  -10*x^10
