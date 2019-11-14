@@ -73,22 +73,20 @@ class Polinom:
         second = ""
         for x in self.values:
             if x[0]>0:
-                second += f" + {x[0]}*x^{x[1]}"
-            else: second += f"  {x[0]}*x^{x[1]}"
+                second += f" + {x[0]}x^{x[1]}"
+            else: second += f" - {-x[0]}x^{x[1]}"
 
         return first + second[2:]
 
-    def __call__(self,val,i):
+    def __call__(self,val):
         """Перевантаження оператора ()"""
-        if i >= 0:
-            if i in self.indexes:
-                for x in self.values:
-                    if x[1] == i:
-                        return x[0]*(val**i)
-            else:
-                raise IndexError("Bad index")
+        if self.values == []:
+            return 0
         else:
-            raise IndexError("Bad index")
+            sum = 0
+            for x in self.values:
+                sum += x[0]*(val**x[1])
+            return sum
 
     def __mul__(self,other):
         """Перевантаження оператора * """

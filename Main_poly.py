@@ -12,7 +12,7 @@ print("Polinom b: ",b)
 print("Polinom c: ",c,end="\n\n")
 
 print("===Call===\n")
-print(a(5,2),"\n")
+print(a(5),"\n")
 print("===Call===\n")
 
 
