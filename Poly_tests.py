@@ -60,7 +60,7 @@ class Poly_tests(unittest.TestCase):
         self.assertTrue("Empty value" in str(context.exception))
 
     def test_str(self):
-        line = "P_10(x) =  1*x^2 + 13*x^3  -20*x^5 + 5*x^7  -10*x^10"
+        line = "P_10(x) =  1x^2 + 13x^3 - 20x^5 + 5x^7 - 10x^10"
         poly_line = self.a.__str__()
 
         self.assertEqual(poly_line,line)
@@ -72,21 +72,9 @@ class Poly_tests(unittest.TestCase):
         self.assertEqual(poly_line,line)
 
     def test_call(self):
-        value = self.b(5,2)
+        value = self.b(5)
 
-        self.assertEqual(value,25)
-
-    def test_call_2(self):
-        with self.assertRaises(Exception) as context:
-            x = self.a(1,1)
-
-        self.assertTrue("Bad index" in str(context.exception))
-
-    def test_call_3(self):
-        with self.assertRaises(Exception) as context:
-            x = self.a(1,-1)
-
-        self.assertTrue("Bad index" in str(context.exception))
+        self.assertEqual(value,71965)
 
     def tets_mul(self):
         values = [(26,1), (2,2), (46,5)]
